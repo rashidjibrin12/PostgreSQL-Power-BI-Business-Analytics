@@ -60,7 +60,8 @@ These views are arranged to support executive decision-making: high-level KPIs a
 ## Screenshots
 
 ### Donut Chart Showing Revenue by Product Category
-<img src="https://github.com/user-attachments/assets/2029e248-07eb-4206-a055-1ae280bab00a" alt="Executive Power BI dashboard overview" width="900" style="max-width:100%; height:auto;" />
+<img width="547" height="347" alt="{BF2927A4-7AE6-420C-8866-32891732C2DB}" src="https://github.com/user-attachments/assets/b8130f82-bd49-4ea3-be57-4f8fa421bdb8" />
+
 
 ### Revenue by Month
 <img src="https://github.com/user-attachments/assets/860cd16b-516c-4f19-acde-d4bfea8097b8" alt="Power BI sales and regional performance dashboard" width="900" style="max-width:100%; height:auto;" />
