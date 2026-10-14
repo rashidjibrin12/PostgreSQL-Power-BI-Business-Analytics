@@ -3,7 +3,7 @@
 ## Overview
 This repository contains an executive-level Power BI dashboard built on a PostgreSQL-style star schema for sales analysis. The project demonstrates how transactional sales data can be modeled, validated, and transformed into insights that help business leaders track performance, monitor profitability, and identify growth opportunities.
 
-The report is designed for high-level stakeholders and combines KPI cards, trend analysis, geographic performance, and customer/product drill-downs into a single interactive dashboard.
+The report is designed for high-level stakeholders and combines KPI cards, trend analysis, geographic performance, and customer/product drill-downs into an interactive Power BI Dashboard with 3 pages.
 
 ## Skills Demonstrated
 - Data modeling using a star schema (FactSales + dimension tables)
