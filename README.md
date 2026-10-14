@@ -39,10 +39,10 @@ The SQL samples in `SQLQueries.sql` show examples of revenue ranking, regional a
 The dashboard and SQL analyses reveal a number of actionable business findings:
 
 - Top products: A small set of products contributes disproportionately to total revenue, making them easy to identify in a ranked product view.
-- Category profitability: Some categories generate strong revenue but lower margins, highlighting areas where pricing or mix improvements may be needed.
+- Some categories generate strong revenue but lower margins, highlighting areas where pricing or mix improvements may be needed.
 - Regional performance: Countries and cities such as Ontario consistently lead in sales, offering clear opportunities for focused regional strategy.
-- Seasonality: Monthly trends show repeated seasonal patterns that are useful for forecasting, inventory planning, and campaign timing.
-- Customer concentration: A subset of customers contributes a large share of total sales, indicating opportunities for retention and upsell programs.
+- Monthly trends show repeated seasonal patterns that are useful for forecasting, inventory planning, and campaign timing.
+- A subset of customers contributes a large share of total sales, indicating opportunities for retention and upsell programs.
 
 ## Dashboard Highlights
 The executive report includes the following visual components:
@@ -59,10 +59,10 @@ These views are arranged to support executive decision-making: high-level KPIs a
 
 ## Screenshots
 
-### Executive Dashboard Overview
+### Donut Chart Showing Revenue by Product Category
 <img src="https://github.com/user-attachments/assets/2029e248-07eb-4206-a055-1ae280bab00a" alt="Executive Power BI dashboard overview" width="900" style="max-width:100%; height:auto;" />
 
-### Sales, Products, and Regional Performance
+### Revenue by Month
 <img src="https://github.com/user-attachments/assets/860cd16b-516c-4f19-acde-d4bfea8097b8" alt="Power BI sales and regional performance dashboard" width="900" style="max-width:100%; height:auto;" />
 
 ## How to Review
