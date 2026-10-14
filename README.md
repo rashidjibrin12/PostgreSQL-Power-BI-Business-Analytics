@@ -1,16 +1,21 @@
 # PostgreSQL Sales Analysis - Executive Power BI Report
 
+## Overview
+This repository contains an executive-level Power BI dashboard built on a PostgreSQL-style star schema for sales analysis. The project demonstrates how transactional sales data can be modeled, validated, and transformed into insights that help business leaders track performance, monitor profitability, and identify growth opportunities.
+
+The report is designed for high-level stakeholders and combines KPI cards, trend analysis, geographic performance, and customer/product drill-downs into a single interactive dashboard.
+
 ## Skills Demonstrated
-- Data modeling (Star schema: FactSales + dimension tables)
-- PostgreSQL for extraction and aggregation
-- Power BI report design: KPIs, trend analysis, categorical breakdowns, maps
-- Data visualization and storytelling for executive audiences
-- Business analysis: sales, profitability, and regional performance
+- Data modeling using a star schema (FactSales + dimension tables)
+- PostgreSQL for data extraction, validation, and aggregation
+- Power BI report design for KPI monitoring and executive storytelling
+- Data visualization and dashboard UX for non-technical stakeholders
+- Business analysis across sales, profitability, and regional performance
 
-## Project Overview
-This repository contains a Power BI report (Power BI Executive.pbix) built on a PostgreSQL-style star schema. The model centers on a FactSales table with supporting dimension tables (Product, Customer, Region, Date). The deliverable is an executive-facing dashboard designed to answer high-level business questions about product performance, regional sales, monthly trends, and profitability.
-
-I used SQL to prepare and validate key aggregations (samples in SQLQueries.sql) and Power BI to create interactive visualizations so stakeholders can rapidly monitor business health and drill into details.
+## Project Structure
+- `Power BI Executive.pbix` — executive dashboard file
+- `SQLQueries.sql` — SQL examples for extracting and validating key metrics
+- `README.md` — project overview and usage guidance
 
 ## Business Questions Addressed
 - Which products drive the most revenue and how are they ranked?
@@ -20,48 +25,52 @@ I used SQL to prepare and validate key aggregations (samples in SQLQueries.sql) 
 - Which customers and segments contribute the most to revenue?
 
 ## Data Model
-The report uses a star schema with the following primary tables:
-- FactSales: SaleID, DateID, ProductID, CustomerID, RegionID, Quantity, TotalSales, TotalProfit
-- DimProduct: ProductID, ProductName, Category, (other attributes)
-- DimCustomer: CustomerID, CustomerName, (segment attributes)
-- DimRegion: RegionID, Country, City, (other location attributes)
-- DimDate: DateID, Year, Month, MonthName, (date attributes)
+The report relies on a star schema with a central fact table and supporting dimensions:
 
-SQL queries in SQLQueries.sql show example extractions and aggregations (top products, regional totals, monthly sales, category profit margins, ranking products by sales).
+- `FactSales`: `SaleID`, `DateID`, `ProductID`, `CustomerID`, `RegionID`, `Quantity`, `TotalSales`, `TotalProfit`
+- `DimProduct`: `ProductID`, `ProductName`, `Category`, and other product-level attributes
+- `DimCustomer`: `CustomerID`, `CustomerName`, and customer/segment attributes
+- `DimRegion`: `RegionID`, `Country`, `City`, and geographic attributes
+- `DimDate`: `DateID`, `Year`, `Month`, `MonthName`, and date attributes
 
-## Key Findings
-Based on the report model and the SQL analyses included in this repo, the executive dashboard highlights the following insights:
-- Top products: A small set of products, like Product 117 and 133, contribute disproportionately to revenue - these are surfaced in a ranked list and top-N bar chart.
-- Category profitability: Product categories show different profit margins; some high-sales categories have lower margins and warrant margin-improvement focus.
-- Regional performance: Certain countries and cities like Ontario consistently lead in total sales; a map and ranked region table make these easy to spot.
-- Seasonality and trends: Monthly sales lines show clear seasonality trend, useful for forecasting and inventory planning.
-- Customer concentration: A subset of customers generate a large portion of sales (Pareto principle), signalling opportunities for targeted retention and upsell.
+The SQL samples in `SQLQueries.sql` show examples of revenue ranking, regional aggregation, category profitability analysis, and monthly trend evaluation.
 
-(These findings are derived from the data model and SQL queries in this repo; for exact numeric values open the Power BI file and use the report filters.)
+## Key Insights
+The dashboard and SQL analyses reveal a number of actionable business findings:
 
-## Visualizations Included
-- KPI cards
+- Top products: A small set of products contributes disproportionately to total revenue, making them easy to identify in a ranked product view.
+- Category profitability: Some categories generate strong revenue but lower margins, highlighting areas where pricing or mix improvements may be needed.
+- Regional performance: Countries and cities such as Ontario consistently lead in sales, offering clear opportunities for focused regional strategy.
+- Seasonality: Monthly trends show repeated seasonal patterns that are useful for forecasting, inventory planning, and campaign timing.
+- Customer concentration: A subset of customers contributes a large share of total sales, indicating opportunities for retention and upsell programs.
+
+## Dashboard Highlights
+The executive report includes the following visual components:
+
+- KPI cards for revenue, profit, sales volume, and margin
 - Top products bar chart
-- Category profit margin chart
-- Monthly trend line chart
-- Regional map and table
-- Customer table / Pareto chart
-- Interactive slicers: Year, Category, Region, and Product to filter the whole report
+- Category profit margin analysis
+- Monthly sales trend line chart
+- Regional map and ranked region table
+- Customer table and Pareto-style concentration view
+- Interactive slicers for year, category, region, and product
 
-These visualizations are laid out for an executive audience; high-level KPIs up top, trends and geographic context next, and product/customer detail available for drill-down.
+These views are arranged to support executive decision-making: high-level KPIs at the top, trend and geographic context in the middle, and detailed product/customer analysis below.
 
-Some Screenshots
+## Screenshots
 
-<img width="496" height="380" alt="{7D5D65C7-E028-4FCF-99FC-580D8B0DB271}" src="https://github.com/user-attachments/assets/2029e248-07eb-4206-a055-1ae280bab00a" />
+### Executive Dashboard Overview
+<img src="https://github.com/user-attachments/assets/2029e248-07eb-4206-a055-1ae280bab00a" alt="Executive Power BI dashboard overview" width="900" style="max-width:100%; height:auto;" />
 
-<img width="691" height="357" alt="{BDD0F458-CCF7-4A6F-8B8D-297B14F39B5A}" src="https://github.com/user-attachments/assets/860cd16b-516c-4f19-acde-d4bfea8097b8" />
-
+### Sales, Products, and Regional Performance
+<img src="https://github.com/user-attachments/assets/860cd16b-516c-4f19-acde-d4bfea8097b8" alt="Power BI sales and regional performance dashboard" width="900" style="max-width:100%; height:auto;" />
 
 ## How to Review
-1. Open Power BI Desktop and load Power BI Executive.pbix from the repository.
-2. If you want to run the SQL samples, connect to your PostgreSQL instance (or the database you use for FactSales and dimension tables) and run the queries in SQLQueries.sql.
-3. Use slicers and date filters in the report to validate trends and inspect the top or bottom performers.
+1. Open Power BI Desktop and load `Power BI Executive.pbix` from this repository.
+2. If you want to run the SQL samples, connect to your PostgreSQL instance (or the database containing the `FactSales` and dimension tables) and execute the queries in `SQLQueries.sql`.
+3. Use the report slicers and date filters to explore trends, compare categories, and investigate top and bottom performers.
 
-## Summary / Conclusion
-This project demonstrates end-to-end analytical work: designing a clean star schema, using SQL for robust aggregations and ranking, and building an executive-grade Power BI report that turns raw sales data into actionable insights. The dashboard is especially useful for leadership who need a quick read on revenue, profitability, and geographic performance while preserving the ability to drill into product- and customer-level detail.
+## Summary
+This project demonstrates the full analytical workflow: structuring a clean dimensional model, using SQL to validate and aggregate key metrics, and creating an executive-grade Power BI dashboard that turns raw sales data into actionable business insight.
 
+It is a strong example of how data modeling, SQL analysis, and effective dashboard design can work together to support real business decision-making.
